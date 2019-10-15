@@ -35,15 +35,19 @@ public class App
     		id.setHobby("Cricket");
     		id.setYoutube_channels("www.youtube.com");
     		
+    		session.getTransaction().begin();
+    		session.persist(id);
+  			session.getTransaction().commit();	
+  			
     		Instructor i = new Instructor();    		
     		i.setFirst_name("Sunny");
     		i.setLast_name("Deol");
     		i.setEmail("sunny@i.com");
+    		i.setInstructorDetailsId(id);
     		
     		
     		
     		session.getTransaction().begin();
-    		session.persist(id);
     		session.persist(i);
   			session.getTransaction().commit();	
     	}
