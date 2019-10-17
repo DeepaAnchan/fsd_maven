@@ -1,0 +1,3 @@
+com\customer_details\model\Customer.class
+com\customer_details\controller\AddCustomer_details.class
+com\customer_details\view\ListCustomerDetails.class
