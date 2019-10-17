@@ -1,0 +1,5 @@
+com\soccer_league\view\ListLeagueServlet.class
+com\soccer_league\model\League.class
+com\soccer_league\view\ErrorServlet.class
+com\soccer_league\view\SuccessServlet.class
+com\soccer_league\controller\AddLeagueServlet.class
