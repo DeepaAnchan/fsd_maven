@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+<!-- 
+	<beans>
+		<bean id="fortune1" class="beans.FortuneService"></bean>
+		<bean id="coach" class="beans.BaseballCoach">
+			<constructor-arg name="fortune" ref="fortune1"></constructor-arg>
+		</bean>
+	</beans>
+ -->
+ 
+ <!--  
+	 <beans>
+			<bean id="fortune1" class="beans.FortuneService"></bean>
+			<bean id="coach" class="beans.BaseballCoach">
+				<property name="fortune" ref="fortune1"/>
+			</bean>
+			
+	</beans 
+  -->
+  
+  <!-- 
+   <beans>
+   
+		<bean id="fortune1" class="beans.FortuneService"></bean>
+		<bean id="coach" class="beans.CricketCoach">
+			<property name="fortune" ref="fortune1"/>
+			<property name="email" value="admin@luv2code.com"/>
+			<property name="teamName" value="Hydrabad Sunriser"/>
+		</bean>		
+  </beans>
+ -->
+ 
+ <beans>
+ 		<context:property-placeholder location="classpath:sport.properties" />
+		<bean id="fortune1" class="beans.FortuneService"></bean>
+		<bean id="coach" class="beans.CricketCoach">
+			<property name="fortune" ref="fortune1"/>
+			<property name="email" value="${foo.email}"/>
+			<property name="teamName" value="${foo.teamName}"/>
+		</bean>		
+</beans>
+</beans>
